@@ -1,0 +1,392 @@
+<!-- ========================================
+     NGO Template - Modals
+     Quick donate modal & login modal
+     ======================================== -->
+
+<!-- Quick Donate Modal -->
+<div class="modal" id="quick-donate-modal" role="dialog" aria-labelledby="quick-donate-title" aria-hidden="true">
+    <div class="modal-overlay" data-dismiss="modal"></div>
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="quick-donate-title">Make a Difference Today</h3>
+                <button class="modal-close" data-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="donate-form" id="quick-donate-form">
+                    <!-- Amount Selection -->
+                    <div class="form-group">
+                        <label class="form-label">Select Donation Amount</label>
+                        <div class="amount-options">
+                            <button type="button" class="amount-btn" data-amount="500">₹ 500</button>
+                            <button type="button" class="amount-btn" data-amount="1000">₹ 1,000</button>
+                            <button type="button" class="amount-btn" data-amount="2500">₹ 2,500</button>
+                            <button type="button" class="amount-btn" data-amount="5000">₹ 5,000</button>
+                            <button type="button" class="amount-btn" data-amount="10000">₹ 10,000</button>
+                            <button type="button" class="amount-btn custom-amount-btn">Custom</button>
+                        </div>
+                    </div>
+
+                    <!-- Custom Amount Input -->
+                    <div class="form-group custom-amount-group" style="display: none;">
+                        <label class="form-label" for="custom-amount">Custom Amount (₹)</label>
+                        <div class="currency-input-wrapper">
+                            <span class="currency-symbol">₹</span>
+                            <input type="number" class="form-control" id="custom-amount" placeholder="Enter amount" min="100">
+                        </div>
+                    </div>
+
+                    <!-- Donation Type -->
+                    <div class="form-group">
+                        <label class="form-label">Donation Type</label>
+                        <div class="donation-type-options">
+                            <label class="radio-option">
+                                <input type="radio" name="donation-type" value="one-time" checked>
+                                <span class="radio-label">One-Time</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="donation-type" value="monthly">
+                                <span class="radio-label">Monthly</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Donor Information -->
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label" for="donor-name">Full Name *</label>
+                                <input type="text" class="form-control" id="donor-name" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label" for="donor-email">Email Address *</label>
+                                <input type="email" class="form-control" id="donor-email" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label" for="donor-phone">Phone Number *</label>
+                                <div class="phone-input-wrapper">
+                                    <span class="country-code">+91</span>
+                                    <input type="tel" class="form-control" id="donor-phone" placeholder="98765 43210" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label" for="donor-pan">PAN Number (Optional)</label>
+                                <input type="text" class="form-control" id="donor-pan" placeholder="For tax receipt">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Terms -->
+                    <div class="form-group">
+                        <label class="checkbox-option">
+                            <input type="checkbox" required>
+                            <span class="checkbox-label">I agree to the <a href="terms.html" target="_blank">Terms & Conditions</a> and <a href="privacy-policy.html" target="_blank">Privacy Policy</a></span>
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">
+                        Proceed to Payment
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* ========================================
+   Modal Styles
+   ======================================== */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-dialog {
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    z-index: 1;
+    animation: slideDown 0.3s ease;
+}
+
+.modal-dialog.modal-lg {
+    max-width: 700px;
+}
+
+.modal-content {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+
+.modal-header {
+    padding: 1.5rem 2rem;
+    background-color: var(--light-bg);
+    border-bottom: 1px solid var(--light-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--dark);
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--gray);
+    cursor: pointer;
+    transition: color 0.2s ease;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-close:hover {
+    color: var(--danger);
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+/* Amount Options */
+.amount-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+}
+
+.amount-btn {
+    padding: 1rem;
+    border: 2px solid var(--light-gray);
+    background-color: var(--white);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.amount-btn:hover {
+    border-color: var(--primary-color);
+    background-color: rgba(255, 107, 53, 0.05);
+}
+
+.amount-btn.active {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Radio & Checkbox Options */
+.donation-type-options {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.radio-option,
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.radio-option input[type="radio"],
+.checkbox-option input[type="checkbox"] {
+    margin-right: 0.5rem;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.radio-label,
+.checkbox-label {
+    font-size: 0.95rem;
+    color: var(--dark-gray);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .modal-body {
+        padding: 1.5rem;
+    }
+
+    .amount-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .modal-header {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .modal-title {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .amount-options {
+        grid-template-columns: 1fr;
+    }
+
+    .donation-type-options {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
+</style>
+
+<script>
+// Modal functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Open modal
+    document.querySelectorAll('[data-modal]').forEach(trigger => {
+        trigger.addEventListener('click', function(e) {
+            e.preventDefault();
+            const modalId = this.getAttribute('data-modal');
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    // Close modal
+    document.querySelectorAll('[data-dismiss="modal"]').forEach(closeBtn => {
+        closeBtn.addEventListener('click', function() {
+            const modal = this.closest('.modal');
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+
+    // Close on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.modal.show').forEach(modal => {
+                modal.classList.remove('show');
+                document.body.style.overflow = '';
+            });
+        }
+    });
+
+    // Amount selection
+    document.querySelectorAll('.amount-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+
+            if (this.classList.contains('custom-amount-btn')) {
+                document.querySelector('.custom-amount-group').style.display = 'block';
+            } else {
+                document.querySelector('.custom-amount-group').style.display = 'none';
+                document.getElementById('custom-amount').value = '';
+            }
+        });
+    });
+
+    // Quick donate form submission
+    document.getElementById('quick-donate-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const activeAmount = document.querySelector('.amount-btn.active');
+        let amount = activeAmount ? activeAmount.getAttribute('data-amount') : null;
+        
+        if (activeAmount && activeAmount.classList.contains('custom-amount-btn')) {
+            amount = document.getElementById('custom-amount').value;
+        }
+        
+        if (!amount || amount < 100) {
+            alert('Please select or enter a valid donation amount (minimum ₹100)');
+            return;
+        }
+        
+        // Simulate redirect to payment gateway
+        alert(`Redirecting to payment gateway for ₹${amount}...\nThis would integrate with Razorpay/PayU/UPI in production.`);
+        
+        // In production, redirect to donate.html or payment gateway
+        // window.location.href = 'donate.html?amount=' + amount;
+    });
+
+    // Login form submission
+    document.getElementById('modal-login-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const email = document.getElementById('login-email').value;
+        const password = document.getElementById('login-password').value;
+        
+        // Simulate login (in production, use AJAX to authenticate)
+        if (email && password) {
+            alert('Login functionality would authenticate here and redirect to dashboard.html');
+            // window.location.href = 'dashboard.html';
+        }
+    });
+});
+</script>
+

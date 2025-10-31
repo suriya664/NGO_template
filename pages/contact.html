@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with us. We'd love to hear from you.">
+    <title>Contact Us - NGO Template</title>
+    
+    <link rel="icon" type="image/png" href="../assets/img/icons/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/7013617/pexels-photo-7013617.jpeg?auto=compress&cs=tinysrgb&w=1600');">
+        <div class="container">
+            <h1 class="page-title">Contact Us</h1>
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Contact</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Contact Form -->
+                <div class="col-lg-8">
+                    <div class="contact-form-wrapper">
+                        <h2>Send Us a Message</h2>
+                        <p class="mb-4">Have questions or want to get involved? Fill out the form below and we'll get back to you within 24 hours.</p>
+
+                        <form class="contact-form" id="contact-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label" for="contact-name">Full Name *</label>
+                                    <input type="text" class="form-control" id="contact-name" name="name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="contact-email">Email Address *</label>
+                                    <input type="email" class="form-control" id="contact-email" name="email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="contact-phone">Phone Number</label>
+                                    <div class="phone-input-wrapper">
+                                        <span class="country-code">+91</span>
+                                        <input type="tel" class="form-control" id="contact-phone" name="phone" placeholder="98765 43210">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="contact-subject">Subject *</label>
+                                    <select class="form-control" id="contact-subject" name="subject" required>
+                                        <option value="">Select a subject</option>
+                                        <option value="donation">Donation Inquiry</option>
+                                        <option value="volunteer">Volunteer Inquiry</option>
+                                        <option value="partnership">Partnership Opportunity</option>
+                                        <option value="general">General Question</option>
+                                        <option value="support">Support/Feedback</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" for="contact-message">Your Message *</label>
+                                    <textarea class="form-control" id="contact-message" name="message" rows="6" required></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label class="checkbox-option">
+                                    <input type="checkbox" required>
+                                    <span>I agree to the <a href="privacy-policy.html">Privacy Policy</a></span>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg mt-3">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="col-lg-4">
+                    <div class="contact-info-card">
+                        <h4>Get in Touch</h4>
+                        <p>We're here to answer your questions and help you make a difference.</p>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Office Address</h5>
+                                <p>123 NGO Street, Andheri West,<br>Mumbai, Maharashtra 400053<br>India</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Phone Number</h5>
+                                <p><a href="tel:+919876543210">+91 98765 43210</a><br>
+                                <a href="tel:+912226123456">+91 22 2612 3456</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Email Address</h5>
+                                <p><a href="mailto:info@ngotemplate.org">info@ngotemplate.org</a><br>
+                                <a href="mailto:support@ngotemplate.org">support@ngotemplate.org</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Office Hours</h5>
+                                <p>Monday - Saturday:<br>9:00 AM - 6:00 PM IST<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+
+                        <div class="social-connect mt-4">
+                            <h5>Follow Us</h5>
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container-fluid p-0">
+            <div class="map-placeholder">
+                <!-- In production, integrate Google Maps or other map service -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.14571537283!2d72.74109995709186!3d19.082177513698687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Quick answers to common questions</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-toggle">
+                                <span>How can I donate?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>You can donate through our online donation page using credit/debit cards, UPI, net banking, or wallets. We also accept bank transfers and cheques.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <button class="accordion-toggle">
+                                <span>Are donations tax-deductible?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Yes! All donations are eligible for 50% tax deduction under Section 80G of the Income Tax Act, 1961. You'll receive an instant tax receipt via email.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <button class="accordion-toggle">
+                                <span>How do I become a volunteer?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Fill out our volunteer application form on the Volunteer page. Our team will review your application and contact you within 5-7 business days.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <button class="accordion-toggle">
+                                <span>Can I visit your office?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Yes, we welcome visitors! Please call ahead to schedule an appointment during our office hours (Monday-Saturday, 9 AM - 6 PM IST).</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <button class="accordion-toggle">
+                                <span>How are donations used?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>We maintain complete transparency. 85% of donations go directly to programs, 10% to operations, and 5% to fundraising. View our annual reports for detailed breakdowns.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <div id="modals-placeholder"></div>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/ajax.js"></script>
+    <script>
+        // Load partials
+        fetch('../partials/header.html').then(res => res.text()).then(html => {
+            document.getElementById('header-placeholder').innerHTML = html;
+            const script = document.createElement('script');
+            script.textContent = document.querySelector('#header-placeholder script').textContent;
+            document.body.appendChild(script);
+        });
+        
+        fetch('../partials/footer.html').then(res => res.text()).then(html => {
+            document.getElementById('footer-placeholder').innerHTML = html;
+            const script = document.createElement('script');
+            script.textContent = document.querySelector('#footer-placeholder script').textContent;
+            document.body.appendChild(script);
+        });
+        
+        fetch('../partials/modals.html').then(res => res.text()).then(html => {
+            document.getElementById('modals-placeholder').innerHTML = html;
+            const script = document.createElement('script');
+            script.textContent = document.querySelector('#modals-placeholder script').textContent;
+            document.body.appendChild(script);
+        });
+    </script>
+
+    <style>
+        .page-header {
+            background-size: cover;
+            background-position: center;
+            padding: 5rem 0 3rem;
+            color: white;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .breadcrumb {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .breadcrumb a {
+            color: white;
+        }
+
+        .contact-form-wrapper {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact-info-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            position: sticky;
+            top: 100px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1.25rem;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .contact-details h5 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .contact-details p {
+            margin: 0;
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .contact-details a {
+            color: var(--primary-color);
+            transition: color 0.2s ease;
+        }
+
+        .contact-details a:hover {
+            color: var(--primary-dark);
+        }
+
+        .social-connect h5 {
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background-color: var(--light-bg);
+            color: var(--dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .map-placeholder {
+            height: 450px;
+            background-color: var(--light-gray);
+        }
+
+        .map-placeholder iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        .accordion {
+            background-color: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .accordion-item:last-child {
+            border-bottom: none;
+        }
+
+        .accordion-toggle {
+            width: 100%;
+            padding: 1.5rem;
+            background-color: transparent;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            text-align: left;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--dark);
+            transition: background-color 0.2s ease;
+        }
+
+        .accordion-toggle:hover {
+            background-color: var(--light-bg);
+        }
+
+        .accordion-toggle i {
+            transition: transform 0.3s ease;
+            color: var(--primary-color);
+        }
+
+        .accordion-item.active .accordion-toggle i {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-content {
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .accordion-content p {
+            color: var(--gray);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        @media (max-width: 991px) {
+            .contact-info-card {
+                position: static;
+                margin-top: 2rem;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .contact-form-wrapper {
+                padding: 1.5rem;
+            }
+
+            .map-placeholder {
+                height: 300px;
+            }
+        }
+    </style>
+</body>
+</html>
+

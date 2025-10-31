@@ -1,0 +1,350 @@
+<!-- ========================================
+     NGO Template - Header & Navigation
+     Sticky header with donation CTA
+     ======================================== -->
+
+<header id="main-header">
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-wrapper">
+                <!-- Logo -->
+                <div class="navbar-brand">
+                    <a href="index.html" class="logo" aria-label="Home">
+                        <img src="../assets/img/logo.svg" alt="NGO Logo" class="logo-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/ff6b35/ffffff?text=NGO+Logo'">
+                    </a>
+                </div>
+            
+                <!-- Mobile Menu Toggle -->
+                <button class="navbar-toggler" id="navbar-toggler" aria-label="Toggle Navigation">
+                    <span class="toggler-icon"></span>
+                    <span class="toggler-icon"></span>
+                    <span class="toggler-icon"></span>
+                </button>
+
+                <!-- Navigation Links -->
+                <div class="navbar-menu" id="navbar-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">Campaigns</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="campaigns.html" class="dropdown-item">All Campaigns</a></li>
+                                <li><a href="campaign-details.html" class="dropdown-item">Campaign Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="volunteer.html" class="nav-link">Volunteer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="events.html" class="nav-link">Events</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">Impact</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="impact.html" class="dropdown-item">Success Stories</a></li>
+                                <li><a href="reports.html" class="dropdown-item">Reports</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">More</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="team.html" class="dropdown-item">Our Team</a></li>
+                                <li><a href="partners.html" class="dropdown-item">Partners</a></li>
+                                <li><a href="blog.html" class="dropdown-item">Blog</a></li>
+                                <li><a href="contact.html" class="dropdown-item">Contact</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- CTA Buttons -->
+                    <div class="navbar-actions">
+                        <a href="login.html" class="btn btn-sm btn-outline-primary">
+                            <i class="fas fa-user"></i> Login
+                        </a>
+                        <a href="donate.html" class="btn btn-sm btn-primary donate-btn">Donate Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<style>
+/* ========================================
+   Header & Navigation Styles
+   ======================================== */
+
+#main-header {
+    background-color: var(--white);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+#main-header.scrolled {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.navbar { padding: 0; }
+
+.navbar-wrapper { display: flex; justify-content: space-between; align-items: center; height: 72px; }
+
+.navbar-brand .logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.navbar-menu { display: flex; align-items: center; gap: 1.25rem; }
+
+.nav-list { display: flex; list-style: none; margin: 0; padding: 0; gap: 1rem; align-items: center; }
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link { color: var(--dark); font-weight: 500; font-size: 0.95rem; padding: 8px 10px; line-height: 1; transition: color 0.2s ease; display: block; }
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.nav-item.active .nav-link {
+    color: var(--primary-color);
+}
+
+/* Dropdown */
+.dropdown-toggle::after {
+    content: '▾';
+    margin-left: 0.3rem;
+    font-size: 0.8rem;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--white);
+    box-shadow: var(--shadow-md);
+    border-radius: var(--radius-md);
+    padding: 0.5rem 0;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    list-style: none;
+    z-index: 1001;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 0.6rem 1.25rem;
+    color: var(--dark);
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: var(--light-bg);
+    color: var(--primary-color);
+}
+
+/* Navbar Actions */
+.navbar-actions { display: flex; gap: 0.5rem; align-items: center; }
+
+.donate-btn {
+    box-shadow: 0 4px 8px rgba(255, 107, 53, 0.3);
+    animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 4px 8px rgba(255, 107, 53, 0.3);
+    }
+    50% {
+        box-shadow: 0 4px 16px rgba(255, 107, 53, 0.5);
+    }
+}
+
+/* Mobile Menu Toggle */
+.navbar-toggler {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.toggler-icon {
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler.active .toggler-icon:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-toggler.active .toggler-icon:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggler.active .toggler-icon:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* ========================================
+   Responsive Navigation
+   ======================================== */
+
+@media (max-width: 991px) {
+    .navbar-toggler {
+        display: flex;
+    }
+
+    .navbar-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 280px;
+        height: calc(100vh - 70px);
+        background-color: var(--white);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+        box-shadow: var(--shadow-lg);
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        gap: 0;
+    }
+
+    .navbar-menu.active {
+        left: 0;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        width: 100%;
+    }
+
+    .nav-item {
+        width: 100%;
+        border-bottom: 1px solid var(--light-gray);
+    }
+
+    .nav-link {
+        padding: 1rem 0;
+    }
+
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        padding-left: 1rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .dropdown.active .dropdown-menu {
+        max-height: 500px;
+    }
+
+    .navbar-actions {
+        width: 100%;
+        flex-direction: column;
+        margin-top: 1.5rem;
+    }
+
+    .navbar-actions .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand .logo-img {
+        height: 35px;
+    }
+
+    .navbar {
+        padding: 0.75rem 0;
+    }
+}
+</style>
+
+<script>
+// Header scroll effect
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('main-header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+    // Mark body as having a sticky header to set scroll padding via CSS
+    document.body.classList.add('has-header');
+    const toggler = document.getElementById('navbar-toggler');
+    const menu = document.getElementById('navbar-menu');
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    if (toggler) {
+        toggler.addEventListener('click', function() {
+            this.classList.toggle('active');
+            menu.classList.toggle('active');
+        });
+    }
+
+    // Mobile dropdown toggle
+    if (window.innerWidth <= 991) {
+        dropdowns.forEach(dropdown => {
+            const toggle = dropdown.querySelector('.dropdown-toggle');
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                dropdown.classList.toggle('active');
+            });
+        });
+    }
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.navbar-wrapper')) {
+            menu.classList.remove('active');
+            toggler.classList.remove('active');
+        }
+    });
+
+    // Active page highlighting
+    const currentPage = window.location.pathname.split('/').pop();
+    document.querySelectorAll('.nav-link').forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.closest('.nav-item').classList.add('active');
+        }
+    });
+});
+</script>
+

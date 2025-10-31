@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for your support!">
+    <title>Thank You - NGO Template</title>
+    
+    <link rel="icon" type="image/png" href="../assets/img/icons/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- Thank You Section -->
+    <section class="thank-you-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="thank-you-card">
+                        <!-- Success Icon -->
+                        <div class="success-animation">
+                            <div class="checkmark-circle">
+                                <div class="checkmark"></div>
+                            </div>
+                        </div>
+
+                        <!-- Dynamic Content based on type -->
+                        <div id="thank-you-content">
+                            <!-- Default content -->
+                            <h1 class="thank-you-title">Thank You!</h1>
+                            <p class="thank-you-message">Your support means the world to us.</p>
+                        </div>
+
+                        <!-- Receipt/Confirmation -->
+                        <div id="confirmation-details" class="confirmation-box">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+
+                        <!-- What Happens Next -->
+                        <div class="next-steps">
+                            <h3>What Happens Next?</h3>
+                            <div id="next-steps-content">
+                                <!-- Will be populated based on type -->
+                            </div>
+                        </div>
+
+                        <!-- Social Share -->
+                        <div class="social-share">
+                            <h4>Share Your Support</h4>
+                            <p>Inspire others to join the cause!</p>
+                            <div class="share-buttons">
+                                <a href="#" class="share-btn facebook" onclick="shareOnFacebook(); return false;">
+                                    <i class="fab fa-facebook-f"></i> Facebook
+                                </a>
+                                <a href="#" class="share-btn twitter" onclick="shareOnTwitter(); return false;">
+                                    <i class="fab fa-twitter"></i> Twitter
+                                </a>
+                                <a href="#" class="share-btn whatsapp" onclick="shareOnWhatsApp(); return false;">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp
+                                </a>
+                                <a href="#" class="share-btn linkedin" onclick="shareOnLinkedIn(); return false;">
+                                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="action-buttons">
+                            <a href="index.html" class="btn btn-primary btn-lg">Back to Home</a>
+                            <a href="campaigns.html" class="btn btn-outline-primary btn-lg">View More Campaigns</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Campaigns -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Support More Campaigns</h2>
+                <p>Continue making a difference</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card campaign-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.pexels.com/photos/8422087/pexels-photo-8422087.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Campaign" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Education for All</h3>
+                            <p class="card-text">Help provide quality education to underprivileged children.</p>
+                            <div class="progress-wrapper">
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 62%"></div>
+                                </div>
+                                <div class="progress-info mt-2">
+                                    <span>₹ 12,45,000 raised</span>
+                                    <span>₹ 20,00,000</span>
+                                </div>
+                            </div>
+                            <a href="campaign-details.html" class="btn btn-primary btn-block mt-3">Support</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card campaign-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.pexels.com/photos/7176325/pexels-photo-7176325.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Campaign" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Mobile Health Clinics</h3>
+                            <p class="card-text">Bring medical care to remote villages.</p>
+                            <div class="progress-wrapper">
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 75%"></div>
+                                </div>
+                                <div class="progress-info mt-2">
+                                    <span>₹ 18,75,000 raised</span>
+                                    <span>₹ 25,00,000</span>
+                                </div>
+                            </div>
+                            <a href="campaign-details.html" class="btn btn-primary btn-block mt-3">Support</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card campaign-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Campaign" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Women Empowerment</h3>
+                            <p class="card-text">Empower women through skill training programs.</p>
+                            <div class="progress-wrapper">
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 57%"></div>
+                                </div>
+                                <div class="progress-info mt-2">
+                                    <span>₹ 8,50,000 raised</span>
+                                    <span>₹ 15,00,000</span>
+                                </div>
+                            </div>
+                            <a href="campaign-details.html" class="btn btn-primary btn-block mt-3">Support</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <div id="modals-placeholder"></div>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Load partials
+        fetch('../partials/header.html').then(res => res.text()).then(html => {
+            document.getElementById('header-placeholder').innerHTML = html;
+            const script = document.createElement('script');
+            script.textContent = document.querySelector('#header-placeholder script').textContent;
+            document.body.appendChild(script);
+        });
+        
+        fetch('../partials/footer.html').then(res => res.text()).then(html => {
+            document.getElementById('footer-placeholder').innerHTML = html;
+            const script = document.createElement('script');
+            script.textContent = document.querySelector('#footer-placeholder script').textContent;
+            document.body.appendChild(script);
+        });
+        
+        fetch('../partials/modals.html').then(res => res.text()).then(html => {
+            document.getElementById('modals-placeholder').innerHTML = html;
+            const script = document.createElement('script');
+            script.textContent = document.querySelector('#modals-placeholder script').textContent;
+            document.body.appendChild(script);
+        });
+
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const type = urlParams.get('type');
+        const amount = urlParams.get('amount');
+        const transactionId = 'TXN' + Date.now();
+
+        // Customize content based on type
+        const thankYouContent = document.getElementById('thank-you-content');
+        const confirmationDetails = document.getElementById('confirmation-details');
+        const nextStepsContent = document.getElementById('next-steps-content');
+
+        if (type === 'donation') {
+            thankYouContent.innerHTML = `
+                <h1 class="thank-you-title">Thank You for Your Generous Donation!</h1>
+                <p class="thank-you-message">Your contribution of <strong>₹${amount ? amount.toLocaleString('en-IN') : '...'}</strong> will help us create lasting change.</p>
+            `;
+
+            confirmationDetails.innerHTML = `
+                <h4>Donation Confirmation</h4>
+                <div class="confirmation-row">
+                    <span class="label">Transaction ID:</span>
+                    <span class="value">${transactionId}</span>
+                </div>
+                <div class="confirmation-row">
+                    <span class="label">Amount:</span>
+                    <span class="value">₹${amount ? amount.toLocaleString('en-IN') : '...'}</span>
+                </div>
+                <div class="confirmation-row">
+                    <span class="label">Date:</span>
+                    <span class="value">${new Date().toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' })}</span>
+                </div>
+                <div class="confirmation-row">
+                    <span class="label">Status:</span>
+                    <span class="value badge badge-success">Successful</span>
+                </div>
+                <button class="btn btn-sm btn-outline-primary mt-3" onclick="downloadReceipt()">
+                    <i class="fas fa-download"></i> Download Tax Receipt
+                </button>
+            `;
+
+            nextStepsContent.innerHTML = `
+                <div class="step-item">
+                    <div class="step-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="step-text">You'll receive a tax receipt (80G) via email within 24 hours.</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="step-text">Track your donation's impact through monthly updates.</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="step-text">Access our annual reports to see how funds are utilized.</div>
+                </div>
+            `;
+
+        } else if (type === 'volunteer') {
+            thankYouContent.innerHTML = `
+                <h1 class="thank-you-title">Welcome to Our Volunteer Community!</h1>
+                <p class="thank-you-message">We're excited to have you join us in making a difference.</p>
+            `;
+
+            confirmationDetails.innerHTML = `
+                <h4>Application Confirmation</h4>
+                <div class="confirmation-row">
+                    <span class="label">Application ID:</span>
+                    <span class="value">VOL${Date.now()}</span>
+                </div>
+                <div class="confirmation-row">
+                    <span class="label">Submitted:</span>
+                    <span class="value">${new Date().toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' })}</span>
+                </div>
+                <div class="confirmation-row">
+                    <span class="label">Status:</span>
+                    <span class="value badge badge-info">Under Review</span>
+                </div>
+            `;
+
+            nextStepsContent.innerHTML = `
+                <div class="step-item">
+                    <div class="step-icon"><i class="fas fa-user-check"></i></div>
+                    <div class="step-text">Our team will review your application within 5-7 business days.</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon"><i class="fas fa-phone"></i></div>
+                    <div class="step-text">You'll receive a call/email for a brief introductory conversation.</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="step-text">Attend our orientation program to get started.</div>
+                </div>
+            `;
+
+        } else if (type === 'event') {
+            thankYouContent.innerHTML = `
+                <h1 class="thank-you-title">You're Registered!</h1>
+                <p class="thank-you-message">We look forward to seeing you at the event.</p>
+            `;
+
+            confirmationDetails.innerHTML = `
+                <h4>Event Registration</h4>
+                <div class="confirmation-row">
+                    <span class="label">Registration ID:</span>
+                    <span class="value">EVT${Date.now()}</span>
+                </div>
+                <div class="confirmation-row">
+                    <span class="label">Confirmed:</span>
+                    <span class="value">${new Date().toLocaleDateString('en-IN')}</span>
+                </div>
+            `;
+
+            nextStepsContent.innerHTML = `
+                <div class="step-item">
+                    <div class="step-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="step-text">Check your email for event details and calendar invite.</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon"><i class="fas fa-bell"></i></div>
+                    <div class="step-text">You'll receive reminders before the event.</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="step-text">Find venue details and directions in the confirmation email.</div>
+                </div>
+            `;
+        }
+
+        // Social sharing functions
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.origin);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+        }
+
+        function shareOnTwitter() {
+            const text = encodeURIComponent('I just supported an amazing cause! Join me in making a difference.');
+            const url = encodeURIComponent(window.location.origin);
+            window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+        }
+
+        function shareOnWhatsApp() {
+            const text = encodeURIComponent('I just supported an amazing cause! Check it out and join me in making a difference.');
+            const url = encodeURIComponent(window.location.origin);
+            window.open(`https://wa.me/?text=${text}%20${url}`, '_blank');
+        }
+
+        function shareOnLinkedIn() {
+            const url = encodeURIComponent(window.location.origin);
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+        }
+
+        function downloadReceipt() {
+            alert('Generating tax receipt...\nIn production, this would download a PDF receipt with 80G certification.');
+            // In production, generate and download PDF receipt
+        }
+
+        // Confetti animation (optional enhancement)
+        window.addEventListener('load', function() {
+            // Could add confetti.js or similar library here
+        });
+    </script>
+
+    <style>
+        .thank-you-section {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            padding: 4rem 0;
+        }
+
+        .thank-you-card {
+            background-color: white;
+            padding: 3rem;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+        }
+
+        /* Success Animation */
+        .success-animation {
+            margin-bottom: 2rem;
+        }
+
+        .checkmark-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--success), #20c997);
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: scaleIn 0.5s ease;
+        }
+
+        .checkmark {
+            width: 30px;
+            height: 60px;
+            border: solid white;
+            border-width: 0 6px 6px 0;
+            transform: rotate(45deg);
+            animation: checkmark 0.5s 0.3s ease forwards;
+            opacity: 0;
+        }
+
+        @keyframes scaleIn {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes checkmark {
+            0% { opacity: 0; transform: rotate(45deg) scale(0); }
+            100% { opacity: 1; transform: rotate(45deg) scale(1); }
+        }
+
+        .thank-you-title {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .thank-you-message {
+            font-size: 1.25rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+        }
+
+        .confirmation-box {
+            background-color: var(--light-bg);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            margin: 2rem 0;
+        }
+
+        .confirmation-box h4 {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .confirmation-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .confirmation-row:last-child {
+            border-bottom: none;
+        }
+
+        .confirmation-row .label {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .confirmation-row .value {
+            color: var(--gray);
+        }
+
+        .next-steps {
+            margin: 2rem 0;
+        }
+
+        .next-steps h3 {
+            margin-bottom: 1.5rem;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem 0;
+            text-align: left;
+        }
+
+        .step-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .step-text {
+            flex: 1;
+            padding-top: 0.75rem;
+            color: var(--dark-gray);
+        }
+
+        .social-share {
+            margin: 2rem 0;
+            padding: 2rem;
+            background-color: var(--light-bg);
+            border-radius: var(--radius-lg);
+        }
+
+        .social-share h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .share-btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-md);
+            color: white;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .share-btn.facebook { background-color: #3b5998; }
+        .share-btn.twitter { background-color: #1da1f2; }
+        .share-btn.whatsapp { background-color: #25d366; }
+        .share-btn.linkedin { background-color: #0077b5; }
+
+        .share-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            color: white;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 767px) {
+            .thank-you-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .thank-you-title {
+                font-size: 2rem;
+            }
+
+            .checkmark-circle {
+                width: 100px;
+                height: 100px;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .action-buttons .btn {
+                width: 100%;
+            }
+
+            .share-buttons {
+                flex-direction: column;
+            }
+
+            .share-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</body>
+</html>
+

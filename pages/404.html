@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page not found">
+    <title>404 - Page Not Found | NGO Template</title>
+    
+    <link rel="icon" type="image/png" href="../assets/img/icons/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+    <div class="error-page">
+        <div class="container">
+            <div class="error-content">
+                <!-- 404 Illustration -->
+                <div class="error-illustration">
+                    <div class="error-number">404</div>
+                    <div class="error-icon">
+                        <i class="fas fa-heart-broken"></i>
+                    </div>
+                </div>
+
+                <!-- Error Message -->
+                <h1 class="error-title">Oops! Page Not Found</h1>
+                <p class="error-description">
+                    The page you're looking for seems to have wandered off. Don't worry, even our best volunteers get lost sometimes!
+                </p>
+
+                <!-- Search Bar -->
+                <div class="error-search">
+                    <form class="search-form" action="search.html">
+                        <div class="search-input-group">
+                            <input type="search" name="q" class="form-control" placeholder="Search our website...">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-search"></i> Search
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="quick-links">
+                    <h3>Try these instead:</h3>
+                    <div class="links-grid">
+                        <a href="index.html" class="quick-link-card">
+                            <i class="fas fa-home"></i>
+                            <span>Homepage</span>
+                        </a>
+                        <a href="campaigns.html" class="quick-link-card">
+                            <i class="fas fa-bullhorn"></i>
+                            <span>Campaigns</span>
+                        </a>
+                        <a href="donate.html" class="quick-link-card">
+                            <i class="fas fa-hand-holding-heart"></i>
+                            <span>Donate</span>
+                        </a>
+                        <a href="volunteer.html" class="quick-link-card">
+                            <i class="fas fa-users"></i>
+                            <span>Volunteer</span>
+                        </a>
+                        <a href="about.html" class="quick-link-card">
+                            <i class="fas fa-info-circle"></i>
+                            <span>About Us</span>
+                        </a>
+                        <a href="contact.html" class="quick-link-card">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Back Button -->
+                <div class="error-actions">
+                    <button onclick="history.back()" class="btn btn-outline-primary btn-lg">
+                        <i class="fas fa-arrow-left"></i> Go Back
+                    </button>
+                    <a href="index.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-home"></i> Go to Homepage
+                    </a>
+                </div>
+
+                <!-- Support Info -->
+                <div class="error-support">
+                    <p>Still can't find what you're looking for?</p>
+                    <p><a href="contact.html" class="support-link">Contact our support team</a> or call <a href="tel:+919876543210">+91 98765 43210</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Report broken link (optional analytics)
+        if (document.referrer) {
+            console.log('404 Error - Referrer:', document.referrer);
+            // In production, send to analytics:
+            // trackEvent('404_error', { from: document.referrer, attempted: window.location.pathname });
+        }
+    </script>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 0;
+        }
+
+        .error-content {
+            background-color: white;
+            padding: 3rem;
+            border-radius: var(--radius-xl);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .error-illustration {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .error-number {
+            font-size: 10rem;
+            font-weight: 700;
+            color: var(--light-gray);
+            line-height: 1;
+            margin-bottom: -60px;
+        }
+
+        .error-icon {
+            font-size: 5rem;
+            color: var(--primary-color);
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            10%, 30% {
+                transform: scale(0.9);
+            }
+            20%, 40%, 60%, 80% {
+                transform: scale(1.1);
+            }
+            50%, 70% {
+                transform: scale(1.05);
+            }
+        }
+
+        .error-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .error-description {
+            font-size: 1.125rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .error-search {
+            margin: 2rem 0;
+        }
+
+        .search-input-group {
+            display: flex;
+            gap: 0.5rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .search-input-group .form-control {
+            flex: 1;
+        }
+
+        .quick-links {
+            margin: 3rem 0;
+        }
+
+        .quick-links h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .quick-link-card {
+            padding: 1.5rem 1rem;
+            background-color: var(--light-bg);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--dark);
+        }
+
+        .quick-link-card:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .quick-link-card i {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .quick-link-card span {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .error-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .error-support {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .error-support p {
+            margin: 0.5rem 0;
+            color: var(--gray);
+        }
+
+        .support-link {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        @media (max-width: 991px) {
+            .error-number {
+                font-size: 7rem;
+            }
+
+            .error-icon {
+                font-size: 4rem;
+            }
+
+            .links-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .error-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .error-number {
+                font-size: 5rem;
+            }
+
+            .error-icon {
+                font-size: 3rem;
+            }
+
+            .error-title {
+                font-size: 2rem;
+            }
+
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .error-actions {
+                flex-direction: column;
+            }
+
+            .error-actions .btn {
+                width: 100%;
+            }
+
+            .search-input-group {
+                flex-direction: column;
+            }
+
+            .search-input-group .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</body>
+</html>
+

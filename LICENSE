@@ -1,0 +1,114 @@
+MIT License
+
+Copyright (c) 2025 NGO Template
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## Third-Party Resources
+
+This template uses the following third-party resources:
+
+### Fonts
+- **Google Fonts** (Poppins, Lora)
+  - License: SIL Open Font License 1.1
+  - https://fonts.google.com/
+
+### Icons
+- **Font Awesome Free**
+  - License: Font Awesome Free License
+  - Icons: CC BY 4.0 License
+  - Fonts: SIL OFL 1.1 License
+  - Code: MIT License
+  - https://fontawesome.com/
+
+### Image Placeholders
+The template uses placeholder images from free services for demonstration:
+- **Unsplash** - https://unsplash.com (Free to use)
+- **Pexels** - https://pexels.com (Free to use)
+- **Pixabay** - https://pixabay.com (Free to use)
+- **Lorem Picsum** - https://picsum.photos (Free to use)
+- **Pravatar** - https://pravatar.cc (Free to use)
+
+**Note:** Replace all placeholder images with your own images in production.
+
+### External Libraries (Optional)
+The template is designed to work with optional libraries:
+- AOS (Animate On Scroll)
+- Owl Carousel
+- Chart.js
+- Flatpickr
+- Isotope
+- Magnific Popup
+
+All optional libraries maintain their respective licenses.
+
+---
+
+## Usage Terms
+
+### ✅ You CAN:
+- Use this template for personal projects
+- Use this template for commercial projects
+- Modify the template to fit your needs
+- Distribute modified versions
+- Use in both free and paid projects
+- Remove attribution (though appreciated!)
+
+### ❌ You CANNOT:
+- Hold the author liable for any damages
+- Claim original authorship
+- Resell as a template on marketplaces
+- Present as your own original work
+
+### 👍 We APPRECIATE (Optional):
+- Attribution in footer or credits
+- Star the GitHub repository
+- Share feedback and improvements
+- Report bugs and issues
+
+---
+
+## Warranty Disclaimer
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED. The author makes no guarantees about the suitability of this
+template for any particular purpose.
+
+Users are responsible for:
+- Testing in their specific environment
+- Ensuring compliance with local laws
+- Security implementations
+- Payment gateway integrations
+- Data protection and privacy
+- Backup and disaster recovery
+
+---
+
+## Contact
+
+For questions about licensing or usage:
+- Open an issue on GitHub
+- Email: [your-email@example.com]
+
+---
+
+**Last Updated:** October 14, 2025
+

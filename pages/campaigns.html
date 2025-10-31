@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse all our active campaigns and find a cause you'd like to support.">
+    <title>Campaigns - NGO Template</title>
+    
+    <link rel="icon" type="image/png" href="../assets/img/icons/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/6646919/pexels-photo-6646919.jpeg?auto=compress&cs=tinysrgb&w=1600');">
+        <div class="container">
+            <h1 class="page-title">Our Campaigns</h1>
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Campaigns</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Campaigns Section -->
+    <section class="section">
+        <div class="container">
+            <!-- Filter Bar -->
+            <div class="campaigns-filter mb-5">
+                <div class="row align-items-center g-3">
+                    <div class="col-md-4">
+                        <select class="form-control filter-select" id="category-filter">
+                            <option value="all">All Categories</option>
+                            <option value="education">Education</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="women">Women Empowerment</option>
+                            <option value="environment">Environment</option>
+                            <option value="emergency">Emergency Relief</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-control filter-select" id="status-filter">
+                            <option value="all">All Campaigns</option>
+                            <option value="active">Active</option>
+                            <option value="funded">Fully Funded</option>
+                            <option value="urgent">Urgent</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-control filter-select" id="sort-filter">
+                            <option value="recent">Most Recent</option>
+                            <option value="popular">Most Popular</option>
+                            <option value="urgent">Ending Soon</option>
+                            <option value="amount-low">Amount: Low to High</option>
+                            <option value="amount-high">Amount: High to Low</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campaigns Grid -->
+            <div class="row g-4" id="campaigns-grid">
+                <!-- Campaign 1 -->
+                <div class="col-md-6 col-lg-4 campaign-item" data-category="education" data-status="active">
+                    <div class="card campaign-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.pexels.com/photos/8422087/pexels-photo-8422087.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Education Campaign" class="card-img" loading="lazy">
+                            <span class="campaign-badge badge badge-success">Active</span>
+                            <span class="urgent-badge">18 Days Left</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="campaign-category">
+                                <i class="fas fa-graduation-cap"></i> Education
+                            </div>
+                            <h3 class="card-title">Education for All Children</h3>
+                            <p class="card-text">Providing quality education and school supplies to 500 underprivileged children in rural Maharashtra.</p>
+                            
+                            <div class="progress-wrapper">
+                                <div class="progress-info">
+                                    <span class="raised"><strong>₹ 12,45,000</strong> raised</span>
+                                    <span class="goal">₹ 20,00,000</span>
+                                </div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 62%" role="progressbar"></div>
+                                </div>
+                                <div class="progress-percent">62% funded</div>
+                            </div>
+                            
+                            <div class="campaign-meta">
+                                <span><i class="fas fa-users"></i> 245 Donors</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Maharashtra</span>
+                            </div>
+                            
+                            <a href="campaign-details.html" class="btn btn-primary btn-block mt-3">View Campaign</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Campaign 2 -->
+                <div class="col-md-6 col-lg-4 campaign-item" data-category="healthcare" data-status="active">
+                    <div class="card campaign-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.pexels.com/photos/7176325/pexels-photo-7176325.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Healthcare Campaign" class="card-img" loading="lazy">
+                            <span class="campaign-badge badge badge-success">Active</span>
+                            <span class="urgent-badge">25 Days Left</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="campaign-category">
+                                <i class="fas fa-heartbeat"></i> Healthcare
+                            </div>
+                            <h3 class="card-title">Mobile Health Clinics</h3>
+                            <p class="card-text">Bringing medical care to remote villages through fully-equipped mobile health units.</p>
+                            
+                            <div class="progress-wrapper">
+                                <div class="progress-info">
+                                    <span class="raised"><strong>₹ 18,75,000</strong> raised</span>
+                                    <span class="goal">₹ 25,00,000</span>
+                                </div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 75%" role="progressbar"></div>
+                                </div>
+                                <div class="progress-percent">75% funded</div>
+                            </div>
+                            
+                            <div class="campaign-meta">
+                                <span><i class="fas fa-users"></i> 380 Donors</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Bihar</span>
+                            </div>
+                            
+                            <a href="campaign-details.html" class="btn btn-primary btn-block mt-3">View Campaign</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Campaign 3 -->
+                <div class="col-md-6 col-lg-4 campaign-item" data-category="women" data-status="active">
+                    <div class="card campaign-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Women Empowerment" class="card-img" loading="lazy">
+                            <span class="campaign-badge badge badge-success">Active</span>
+                            <span class="urgent-badge">30 Days Left</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="campaign-category">
+                                <i class="fas fa-female"></i> Women Empowerment
+                            </div>
+                            <h3 class="card-title">Women Skill Development</h3>
+                            <p class="card-text">Vocational training programs empowering 300 women to become financially independent.</p>
+                            
+                            <div class="progress-wrapper">
+                                <div class="progress-info">
+                                    <span class="raised"><strong>₹ 8,50,000</strong> raised</span>
+                                    <span class="goal">₹ 15,00,000</span>
+                                </div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 57%" role="progressbar"></div>
+                                </div>
+                                <div class="progress-percent">57% funded</div>
+                            </div>
+                            
+                            <div class="campaign-meta">
+                                <span><i class="fas fa-users"></i> 192 Donors</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Rajasthan</span>
+                            </div>
+                            
+                            <a href="campaign-details.html" class="btn btn-primary btn-block mt-3">View Campaign</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Campaign 4 -->
+                <div class="col-md-6 col-lg-4 campaign-item" data-category="environment" data-status="active">
+                    <div class="card campaign-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Environment Campaign" class="card-img" loading="lazy">
+                            <span class="campaign-badge badge badge-success">Active</span>
+                            <span class="urgent-badge urgent">5 Days Left</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="campaign-category">
+                                <i class="fas fa-leaf"></i> Environment
+                            </div>
+                            <h3 class="card-title">Plant 10,000 Trees</h3>
+                            <p class="card-text">Community-led afforestation drive to combat climate change and restore green cover.</p>
+                            
+                            <div class="progress-wrapper">
+                                <div class="progress-info">
+                                    <span class="raised"><strong>₹ 4,25,000</strong> raised</span>
+                                    <span class="goal">₹ 5,00,000</span>
+                                </div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 85%" role="progressbar"></div>
+                                </div>
+                                <div class="progress-percent">85% funded</div>
+                            </div>
+                            
+                            <div class="campaign-meta">
+                                <span><i class="fas fa-users"></i> 156 Donors</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Karnataka</span>
+                            </div>
+                            
+                            <a href="campaign-details.html" class="btn btn-primary btn-block mt-3">View Campaign</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Campaign 5 -->
+                <div class="col-md-6 col-lg-4 campaign-item" data-category="emergency" data-status="urgent">
+                    <div class="card campaign-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.pexels.com/photos/6646916/pexels-photo-6646916.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Emergency Relief" class="card-img" loading="lazy">
+                            <span class="campaign-badge badge badge-danger">Urgent</span>
+                            <span class="urgent-badge urgent">3 Days Left</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="campaign-category">
+                                <i class="fas fa-exclamation-triangle"></i> Emergency Relief
+                            </div>
+                            <h3 class="card-title">Flood Relief in Assam</h3>
+                            <p class="card-text">Immediate relief and rehabilitation for 1,000 families affected by recent floods.</p>
+                            
+                            <div class="progress-wrapper">
+                                <div class="progress-info">
+                                    <span class="raised"><strong>₹ 22,50,000</strong> raised</span>
+                                    <span class="goal">₹ 30,00,000</span>
+                                </div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 75%" role="progressbar"></div>
+                                </div>
+                                <div class="progress-percent">75% funded</div>
+                            </div>
+                            
+                            <div class="campaign-meta">
+                                <span><i class="fas fa-users"></i> 520 Donors</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Assam</span>
+                            </div>
+                            
+                            <a href="campaign-details.html" class="btn btn-primary btn-block mt-3">View Campaign</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Campaign 6 -->
+                <div class="col-md-6 col-lg-4 campaign-item" data-category="education" data-status="funded">
+                    <div class="card campaign-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.pexels.com/photos/1370298/pexels-photo-1370298.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Library Campaign" class="card-img" loading="lazy">
+                            <span class="campaign-badge badge badge-info">Fully Funded</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="campaign-category">
+                                <i class="fas fa-book"></i> Education
+                            </div>
+                            <h3 class="card-title">Community Library Project</h3>
+                            <p class="card-text">Establishing libraries in 20 villages to promote reading culture and education.</p>
+                            
+                            <div class="progress-wrapper">
+                                <div class="progress-info">
+                                    <span class="raised"><strong>₹ 12,00,000</strong> raised</span>
+                                    <span class="goal">₹ 12,00,000</span>
+                                </div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 100%" role="progressbar"></div>
+                                </div>
+                                <div class="progress-percent">100% funded</div>
+                            </div>
+                            
+                            <div class="campaign-meta">
+                                <span><i class="fas fa-users"></i> 285 Donors</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Tamil Nadu</span>
+                            </div>
+                            
+                            <a href="campaign-details.html" class="btn btn-outline-primary btn-block mt-3">View Impact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-5">
+                <button class="btn btn-outline-primary btn-lg" id="load-more">Load More Campaigns</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section bg-primary text-white text-center py-5">
+        <div class="container">
+            <h2>Can't Find What You're Looking For?</h2>
+            <p class="mb-4">Make a general donation and we'll allocate it where it's needed most.</p>
+            <a href="donate.html" class="btn btn-lg btn-white">Make a General Donation</a>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <div id="modals-placeholder"></div>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Load partials
+        fetch('../partials/header.html').then(res => res.text()).then(html => {
+            document.getElementById('header-placeholder').innerHTML = html;
+            const script = document.createElement('script');
+            script.textContent = document.querySelector('#header-placeholder script').textContent;
+            document.body.appendChild(script);
+        });
+        
+        fetch('../partials/footer.html').then(res => res.text()).then(html => {
+            document.getElementById('footer-placeholder').innerHTML = html;
+            const script = document.createElement('script');
+            script.textContent = document.querySelector('#footer-placeholder script').textContent;
+            document.body.appendChild(script);
+        });
+        
+        fetch('../partials/modals.html').then(res => res.text()).then(html => {
+            document.getElementById('modals-placeholder').innerHTML = html;
+            const script = document.createElement('script');
+            script.textContent = document.querySelector('#modals-placeholder script').textContent;
+            document.body.appendChild(script);
+        });
+
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryFilter = document.getElementById('category-filter');
+            const statusFilter = document.getElementById('status-filter');
+            const sortFilter = document.getElementById('sort-filter');
+            const campaignsGrid = document.getElementById('campaigns-grid');
+            const campaignItems = document.querySelectorAll('.campaign-item');
+
+            function filterCampaigns() {
+                const category = categoryFilter.value;
+                const status = statusFilter.value;
+
+                campaignItems.forEach(item => {
+                    const itemCategory = item.getAttribute('data-category');
+                    const itemStatus = item.getAttribute('data-status');
+                    
+                    const categoryMatch = category === 'all' || itemCategory === category;
+                    const statusMatch = status === 'all' || itemStatus === status;
+                    
+                    if (categoryMatch && statusMatch) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+
+            categoryFilter.addEventListener('change', filterCampaigns);
+            statusFilter.addEventListener('change', filterCampaigns);
+            
+            sortFilter.addEventListener('change', function() {
+                // Sorting logic would go here in production
+                console.log('Sorting by:', this.value);
+            });
+        });
+    </script>
+
+    <style>
+        .page-header {
+            background-size: cover;
+            background-position: center;
+            padding: 5rem 0 3rem;
+            color: white;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .breadcrumb {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .breadcrumb a {
+            color: white;
+        }
+
+        .campaigns-filter {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .filter-select {
+            cursor: pointer;
+        }
+
+        .campaign-card {
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .card-img-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-img-wrapper img {
+            transition: transform 0.3s ease;
+        }
+
+        .campaign-card:hover .card-img-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .campaign-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1;
+        }
+
+        .urgent-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 0.375rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .urgent-badge.urgent {
+            background-color: var(--danger);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .campaign-category {
+            display: inline-block;
+            padding: 0.375rem 0.875rem;
+            background-color: var(--light-bg);
+            color: var(--primary-color);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .campaign-category i {
+            margin-right: 0.375rem;
+        }
+
+        .progress-percent {
+            text-align: center;
+            font-size: 0.875rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .campaign-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.875rem;
+            color: var(--gray);
+            margin-top: 1rem;
+        }
+
+        .campaign-meta i {
+            margin-right: 0.375rem;
+            color: var(--primary-color);
+        }
+
+        .btn-white {
+            background-color: white;
+            color: var(--primary-color);
+            border: 2px solid white;
+        }
+
+        .btn-white:hover {
+            background-color: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        @media (max-width: 767px) {
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .campaigns-filter .row {
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</body>
+</html>
+

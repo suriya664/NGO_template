@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Upcoming events, workshops, and fundraisers. Join us and make a difference.">
+    <title>Events - NGO Template</title>
+    
+    <link rel="icon" type="image/png" href="../assets/img/icons/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=1600');">
+        <div class="container">
+            <h1 class="page-title">Our Events</h1>
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Events</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Event Filters -->
+    <section class="section">
+        <div class="container">
+            <div class="event-filters">
+                <div class="row align-items-center g-3">
+                    <div class="col-md-4">
+                        <select class="form-control" id="event-type-filter">
+                            <option value="all">All Event Types</option>
+                            <option value="fundraiser">Fundraisers</option>
+                            <option value="workshop">Workshops</option>
+                            <option value="awareness">Awareness Campaigns</option>
+                            <option value="community">Community Events</option>
+                            <option value="training">Training Sessions</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-control" id="event-location-filter">
+                            <option value="all">All Locations</option>
+                            <option value="mumbai">Mumbai</option>
+                            <option value="delhi">Delhi</option>
+                            <option value="bangalore">Bangalore</option>
+                            <option value="online">Online</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-control" id="event-date-filter">
+                            <option value="all">All Dates</option>
+                            <option value="today">Today</option>
+                            <option value="week">This Week</option>
+                            <option value="month">This Month</option>
+                            <option value="upcoming">Upcoming</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Upcoming Events</h2>
+                <p>Join us at these upcoming events and activities</p>
+            </div>
+
+            <div class="row g-4" id="events-grid">
+                <!-- Event 1 -->
+                <div class="col-md-6 col-lg-4 event-item" data-type="fundraiser" data-location="mumbai">
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Charity Gala" loading="lazy">
+                            <span class="event-badge badge badge-success">Upcoming</span>
+                            <div class="event-date-badge">
+                                <div class="date-day">25</div>
+                                <div class="date-month">Nov</div>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <div class="event-meta">
+                                <span class="event-type"><i class="fas fa-tag"></i> Fundraiser</span>
+                                <span class="event-location"><i class="fas fa-map-marker-alt"></i> Mumbai</span>
+                            </div>
+                            <h3 class="event-title">Annual Charity Gala 2025</h3>
+                            <p class="event-description">Join us for an elegant evening of dinner, entertainment, and fundraising to support education programs.</p>
+                            
+                            <div class="event-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>25th November 2025</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>6:00 PM - 10:00 PM</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Grand Hotel, Mumbai</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-ticket-alt"></i>
+                                    <span>₹ 2,500 per person</span>
+                                </div>
+                            </div>
+
+                            <div class="event-stats">
+                                <div class="stat-item">
+                                    <strong>156</strong>
+                                    <span>Registered</span>
+                                </div>
+                                <div class="stat-item">
+                                    <strong>200</strong>
+                                    <span>Capacity</span>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary btn-block" onclick="registerEvent('charity-gala')">
+                                <i class="fas fa-ticket-alt"></i> Register Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="col-md-6 col-lg-4 event-item" data-type="workshop" data-location="online">
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Workshop" loading="lazy">
+                            <span class="event-badge badge badge-info">Online</span>
+                            <div class="event-date-badge">
+                                <div class="date-day">18</div>
+                                <div class="date-month">Nov</div>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <div class="event-meta">
+                                <span class="event-type"><i class="fas fa-tag"></i> Workshop</span>
+                                <span class="event-location"><i class="fas fa-laptop"></i> Online</span>
+                            </div>
+                            <h3 class="event-title">Digital Marketing for NGOs</h3>
+                            <p class="event-description">Learn effective digital marketing strategies to amplify your NGO's reach and impact.</p>
+                            
+                            <div class="event-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>18th November 2025</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>3:00 PM - 5:00 PM</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-laptop"></i>
+                                    <span>Zoom Meeting</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-ticket-alt"></i>
+                                    <span>Free</span>
+                                </div>
+                            </div>
+
+                            <div class="event-stats">
+                                <div class="stat-item">
+                                    <strong>78</strong>
+                                    <span>Registered</span>
+                                </div>
+                                <div class="stat-item">
+                                    <strong>100</strong>
+                                    <span>Capacity</span>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary btn-block" onclick="registerEvent('digital-workshop')">
+                                <i class="fas fa-ticket-alt"></i> Register Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="col-md-6 col-lg-4 event-item" data-type="community" data-location="delhi">
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="https://images.pexels.com/photos/2990644/pexels-photo-2990644.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Clean-up Drive" loading="lazy">
+                            <span class="event-badge badge badge-success">Upcoming</span>
+                            <div class="event-date-badge">
+                                <div class="date-day">20</div>
+                                <div class="date-month">Nov</div>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <div class="event-meta">
+                                <span class="event-type"><i class="fas fa-tag"></i> Community</span>
+                                <span class="event-location"><i class="fas fa-map-marker-alt"></i> Delhi</span>
+                            </div>
+                            <h3 class="event-title">Delhi Clean-up Drive</h3>
+                            <p class="event-description">Join volunteers for a community clean-up initiative. Let's make our city cleaner together!</p>
+                            
+                            <div class="event-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>20th November 2025</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>7:00 AM - 12:00 PM</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>India Gate, Delhi</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-ticket-alt"></i>
+                                    <span>Free</span>
+                                </div>
+                            </div>
+
+                            <div class="event-stats">
+                                <div class="stat-item">
+                                    <strong>245</strong>
+                                    <span>Registered</span>
+                                </div>
+                                <div class="stat-item">
+                                    <strong>300</strong>
+                                    <span>Capacity</span>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary btn-block" onclick="registerEvent('cleanup-drive')">
+                                <i class="fas fa-ticket-alt"></i> Register Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 4 -->
+                <div class="col-md-6 col-lg-4 event-item" data-type="awareness" data-location="bangalore">
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="https://images.pexels.com/photos/7176325/pexels-photo-7176325.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Health Camp" loading="lazy">
+                            <span class="event-badge badge badge-warning">This Week</span>
+                            <div class="event-date-badge">
+                                <div class="date-day">16</div>
+                                <div class="date-month">Nov</div>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <div class="event-meta">
+                                <span class="event-type"><i class="fas fa-tag"></i> Awareness</span>
+                                <span class="event-location"><i class="fas fa-map-marker-alt"></i> Bangalore</span>
+                            </div>
+                            <h3 class="event-title">Free Health Check-up Camp</h3>
+                            <p class="event-description">Free health screening and consultations for underprivileged communities.</p>
+                            
+                            <div class="event-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>16th November 2025</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>9:00 AM - 4:00 PM</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Community Hall, Bangalore</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-ticket-alt"></i>
+                                    <span>Free</span>
+                                </div>
+                            </div>
+
+                            <div class="event-stats">
+                                <div class="stat-item">
+                                    <strong>189</strong>
+                                    <span>Registered</span>
+                                </div>
+                                <div class="stat-item">
+                                    <strong>250</strong>
+                                    <span>Capacity</span>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary btn-block" onclick="registerEvent('health-camp')">
+                                <i class="fas fa-ticket-alt"></i> Register Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 5 -->
+                <div class="col-md-6 col-lg-4 event-item" data-type="training" data-location="online">
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Training" loading="lazy">
+                            <span class="event-badge badge badge-info">Online</span>
+                            <div class="event-date-badge">
+                                <div class="date-day">22</div>
+                                <div class="date-month">Nov</div>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <div class="event-meta">
+                                <span class="event-type"><i class="fas fa-tag"></i> Training</span>
+                                <span class="event-location"><i class="fas fa-laptop"></i> Online</span>
+                            </div>
+                            <h3 class="event-title">Volunteer Leadership Training</h3>
+                            <p class="event-description">Develop leadership skills and learn how to manage volunteer teams effectively.</p>
+                            
+                            <div class="event-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>22nd November 2025</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>10:00 AM - 1:00 PM</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-laptop"></i>
+                                    <span>Google Meet</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-ticket-alt"></i>
+                                    <span>₹ 500</span>
+                                </div>
+                            </div>
+
+                            <div class="event-stats">
+                                <div class="stat-item">
+                                    <strong>42</strong>
+                                    <span>Registered</span>
+                                </div>
+                                <div class="stat-item">
+                                    <strong>50</strong>
+                                    <span>Capacity</span>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary btn-block" onclick="registerEvent('leadership-training')">
+                                <i class="fas fa-ticket-alt"></i> Register Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 6 -->
+                <div class="col-md-6 col-lg-4 event-item" data-type="fundraiser" data-location="mumbai">
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="https://images.pexels.com/photos/2526878/pexels-photo-2526878.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Marathon" loading="lazy">
+                            <span class="event-badge badge badge-success">Upcoming</span>
+                            <div class="event-date-badge">
+                                <div class="date-day">01</div>
+                                <div class="date-month">Dec</div>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <div class="event-meta">
+                                <span class="event-type"><i class="fas fa-tag"></i> Fundraiser</span>
+                                <span class="event-location"><i class="fas fa-map-marker-alt"></i> Mumbai</span>
+                            </div>
+                            <h3 class="event-title">Run for Education Marathon</h3>
+                            <p class="event-description">Participate in our annual marathon to raise funds for children's education programs.</p>
+                            
+                            <div class="event-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>1st December 2025</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>6:00 AM - 10:00 AM</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Marine Drive, Mumbai</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-ticket-alt"></i>
+                                    <span>₹ 750</span>
+                                </div>
+                            </div>
+
+                            <div class="event-stats">
+                                <div class="stat-item">
+                                    <strong>523</strong>
+                                    <span>Registered</span>
+                                </div>
+                                <div class="stat-item">
+                                    <strong>1000</strong>
+                                    <span>Capacity</span>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary btn-block" onclick="registerEvent('marathon')">
+                                <i class="fas fa-ticket-alt"></i> Register Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Calendar CTA -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-box text-center">
+                <h2>Want to Stay Updated?</h2>
+                <p>Subscribe to our newsletter and never miss an event!</p>
+                <div class="newsletter-form-inline">
+                    <form class="d-flex gap-2 justify-content-center flex-wrap">
+                        <input type="email" class="form-control" placeholder="Your email address" style="max-width: 400px;">
+                        <button type="submit" class="btn btn-primary btn-lg">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <div id="modals-placeholder"></div>
+
+    <!-- Event Registration Modal -->
+    <div class="modal" id="event-registration-modal">
+        <div class="modal-overlay" data-dismiss="modal"></div>
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Event Registration</h3>
+                    <button class="modal-close" data-dismiss="modal"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="modal-body">
+                    <form class="event-registration-form" id="event-registration-form">
+                        <input type="hidden" id="event-id" name="event-id">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" name="name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email *</label>
+                                <input type="email" class="form-control" name="email" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Phone Number *</label>
+                                <div class="phone-input-wrapper">
+                                    <span class="country-code">+91</span>
+                                    <input type="tel" class="form-control" name="phone" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Number of Tickets</label>
+                                <input type="number" class="form-control" name="tickets" value="1" min="1" max="10">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Special Requirements (Optional)</label>
+                                <textarea class="form-control" name="requirements" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block mt-3">
+                            <i class="fas fa-check"></i> Confirm Registration
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/ajax.js"></script>
+    <script>
+        // Load partials
+        fetch('../partials/header.html').then(res => res.text()).then(html => {
+            document.getElementById('header-placeholder').innerHTML = html;
+            const script = document.createElement('script');
+            script.textContent = document.querySelector('#header-placeholder script').textContent;
+            document.body.appendChild(script);
+        });
+        
+        fetch('../partials/footer.html').then(res => res.text()).then(html => {
+            document.getElementById('footer-placeholder').innerHTML = html;
+            const script = document.createElement('script');
+            script.textContent = document.querySelector('#footer-placeholder script').textContent;
+            document.body.appendChild(script);
+        });
+        
+        fetch('../partials/modals.html').then(res => res.text()).then(html => {
+            document.getElementById('modals-placeholder').innerHTML = html;
+            const script = document.createElement('script');
+            script.textContent = document.querySelector('#modals-placeholder script').textContent;
+            document.body.appendChild(script);
+        });
+
+        // Event Registration Function
+        function registerEvent(eventId) {
+            document.getElementById('event-id').value = eventId;
+            document.getElementById('event-registration-modal').classList.add('show');
+        }
+
+        // Modal close
+        document.querySelectorAll('[data-dismiss="modal"]').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.closest('.modal').classList.remove('show');
+            });
+        });
+
+        // Event Registration Form
+        document.getElementById('event-registration-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            window.NGO.showToast('Registration successful! Check your email for confirmation.', 'success');
+            document.getElementById('event-registration-modal').classList.remove('show');
+            setTimeout(() => {
+                window.location.href = 'thank-you.html?type=event';
+            }, 2000);
+        });
+
+        // Filter functionality
+        const typeFilter = document.getElementById('event-type-filter');
+        const locationFilter = document.getElementById('event-location-filter');
+        const dateFilter = document.getElementById('event-date-filter');
+        const eventItems = document.querySelectorAll('.event-item');
+
+        function filterEvents() {
+            const type = typeFilter.value;
+            const location = locationFilter.value;
+
+            eventItems.forEach(item => {
+                const itemType = item.getAttribute('data-type');
+                const itemLocation = item.getAttribute('data-location');
+                
+                const typeMatch = type === 'all' || itemType === type;
+                const locationMatch = location === 'all' || itemLocation === location;
+                
+                if (typeMatch && locationMatch) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        typeFilter.addEventListener('change', filterEvents);
+        locationFilter.addEventListener('change', filterEvents);
+        dateFilter.addEventListener('change', filterEvents);
+    </script>
+
+    <style>
+        .page-header {
+            background-size: cover;
+            background-position: center;
+            padding: 5rem 0 3rem;
+            color: white;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .breadcrumb {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .breadcrumb a {
+            color: white;
+        }
+
+        .event-filters {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 2rem;
+        }
+
+        .event-card {
+            background-color: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .event-image {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .event-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .event-card:hover .event-image img {
+            transform: scale(1.05);
+        }
+
+        .event-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1;
+        }
+
+        .event-date-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem;
+            border-radius: var(--radius-md);
+            text-align: center;
+            min-width: 60px;
+        }
+
+        .date-day {
+            font-size: 1.75rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .date-month {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            margin-top: 0.25rem;
+        }
+
+        .event-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .event-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .event-type,
+        .event-location {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
+        .event-type i,
+        .event-location i {
+            color: var(--primary-color);
+            margin-right: 0.375rem;
+        }
+
+        .event-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .event-description {
+            color: var(--gray);
+            margin-bottom: 1.25rem;
+            font-size: 0.95rem;
+        }
+
+        .event-details {
+            background-color: var(--light-bg);
+            padding: 1rem;
+            border-radius: var(--radius-md);
+            margin-bottom: 1.25rem;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+            color: var(--dark-gray);
+        }
+
+        .detail-item i {
+            color: var(--primary-color);
+            width: 16px;
+        }
+
+        .event-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            padding: 1rem;
+            background-color: var(--light-bg);
+            border-radius: var(--radius-md);
+            text-align: center;
+        }
+
+        .stat-item strong {
+            display: block;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-item span {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: var(--radius-xl);
+        }
+
+        .cta-box h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-form-inline {
+            margin-top: 2rem;
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .modal.show {
+            display: flex;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: -1;
+        }
+
+        .modal-dialog {
+            width: 100%;
+            max-width: 600px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .modal-content {
+            background-color: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .modal-header {
+            padding: 1.5rem 2rem;
+            background-color: var(--light-bg);
+            border-bottom: 1px solid var(--light-gray);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-title {
+            margin: 0;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--gray);
+            cursor: pointer;
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        @media (max-width: 767px) {
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .event-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>
+

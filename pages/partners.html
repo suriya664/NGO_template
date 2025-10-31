@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Our partners and sponsors supporting our mission">
+    <title>Partners - NGO Template</title>
+    
+    <link rel="icon" type="image/png" href="../assets/img/icons/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <section class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1600');">
+        <div class="container">
+            <h1 class="page-title">Our Partners</h1>
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Partners</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Partners Grid -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Corporate Partners</h2>
+                <p>Companies supporting our mission</p>
+            </div>
+
+            <div class="partners-grid">
+                <div class="partner-logo">
+                    <img src="https://placehold.co/200x100/e0e0e0/666666?text=Partner+1" alt="Partner">
+                </div>
+                <div class="partner-logo">
+                    <img src="https://placehold.co/200x100/e0e0e0/666666?text=Partner+2" alt="Partner">
+                </div>
+                <div class="partner-logo">
+                    <img src="https://placehold.co/200x100/e0e0e0/666666?text=Partner+3" alt="Partner">
+                </div>
+                <div class="partner-logo">
+                    <img src="https://placehold.co/200x100/e0e0e0/666666?text=Partner+4" alt="Partner">
+                </div>
+                <div class="partner-logo">
+                    <img src="https://placehold.co/200x100/e0e0e0/666666?text=Partner+5" alt="Partner">
+                </div>
+                <div class="partner-logo">
+                    <img src="https://placehold.co/200x100/e0e0e0/666666?text=Partner+6" alt="Partner">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Become a Partner CTA -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-box text-center">
+                <h2>Partner With Us</h2>
+                <p>Join leading organizations in making a social impact. Let's create change together.</p>
+                <a href="contact.html" class="btn btn-primary btn-lg mt-3">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <div id="modals-placeholder"></div>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        fetch('../partials/header.html').then(res => res.text()).then(html => {
+            document.getElementById('header-placeholder').innerHTML = html;
+            const script = document.createElement('script');
+            script.textContent = document.querySelector('#header-placeholder script').textContent;
+            document.body.appendChild(script);
+        });
+        
+        fetch('../partials/footer.html').then(res => res.text()).then(html => {
+            document.getElementById('footer-placeholder').innerHTML = html;
+            const script = document.createElement('script');
+            script.textContent = document.querySelector('#footer-placeholder script').textContent;
+            document.body.appendChild(script);
+        });
+        
+        fetch('../partials/modals.html').then(res => res.text()).then(html => {
+            document.getElementById('modals-placeholder').innerHTML = html;
+            const script = document.createElement('script');
+            script.textContent = document.querySelector('#modals-placeholder script').textContent;
+            document.body.appendChild(script);
+        });
+    </script>
+
+    <style>
+        .page-header {
+            background-size: cover;
+            background-position: center;
+            padding: 5rem 0 3rem;
+            color: white;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .breadcrumb {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .breadcrumb a {
+            color: white;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .partner-logo {
+            background-color: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+
+        .partner-logo:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .partner-logo img {
+            max-width: 100%;
+            height: auto;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .partner-logo:hover img {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: var(--radius-xl);
+        }
+
+        .cta-box h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .cta-box p {
+            color: rgba(255,255,255,0.9);
+            margin: 0;
+        }
+
+        @media (max-width: 767px) {
+            .page-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</body>
+</html>
+

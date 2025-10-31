@@ -1,0 +1,11 @@
+# Netlify-style redirects (also works with GitHub Pages)
+# Redirect root to the main page
+/           /pages/index.html       200
+/index.html /pages/index.html       200
+
+# API endpoints (for future backend integration)
+/api/*      https://your-api-domain.com/api/:splat    200
+
+# Legacy redirects (if needed)
+/home       /pages/index.html       301
+/main       /pages/index.html       301

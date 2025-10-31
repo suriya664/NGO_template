@@ -1,0 +1,47 @@
+# GitHub Pages Configuration for NGO Template
+
+# Site settings
+title: "NGO Template"
+description: "Complete NGO website template with Indian localization"
+baseurl: "" # Leave empty for root domain
+url: "" # Leave empty for GitHub Pages
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Plugin settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - README.md
+  - CHANGELOG.md
+  - GITHUB-UPLOAD-GUIDE.md
+  - UPLOAD-TO-GITHUB-SIMPLE.md
+  - PROJECT-SUMMARY.md
+  - QUICK-START.md
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+
+# Include all other files
+include:
+  - _redirects
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+# Default settings
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"

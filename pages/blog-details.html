@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog post details">
+    <title>Blog Post - NGO Template</title>
+    
+    <link rel="icon" type="image/png" href="../assets/img/icons/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- Blog Post -->
+    <section class="section">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-8">
+                    <article class="blog-post">
+                        <div class="post-header">
+                            <span class="post-category">Education</span>
+                            <h1 class="post-title">Transforming Lives Through Education: A Year in Review</h1>
+                            <div class="post-meta">
+                                <div class="author-info">
+                                    <img src="https://i.pravatar.cc/50?img=1" alt="Author">
+                                    <div>
+                                        <strong>Admin Team</strong>
+                                        <span>14th October 2025 • 5 min read</span>
+                                    </div>
+                                </div>
+                                <div class="post-actions">
+                                    <button onclick="share('facebook')"><i class="fab fa-facebook-f"></i></button>
+                                    <button onclick="share('twitter')"><i class="fab fa-twitter"></i></button>
+                                    <button onclick="share('whatsapp')"><i class="fab fa-whatsapp"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="post-image">
+                            <img src="https://images.pexels.com/photos/8617738/pexels-photo-8617738.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Blog Post">
+                        </div>
+
+                        <div class="post-content">
+                            <p class="lead">Over the past year, our education programs have reached 15,000 children across rural India. This is a story of transformation, hope, and the power of collective action.</p>
+
+                            <p>When we started this journey in 2010, we had a simple vision: ensure every child has access to quality education. Fifteen years later, this vision has become a reality for thousands of children who would have otherwise been left behind.</p>
+
+                            <h3>The Challenge We Faced</h3>
+                            <p>In rural Maharashtra, Bihar, and Rajasthan, we encountered villages where schools existed but lacked basic resources. Children walked barefoot to school, sat on bare floors, and shared torn textbooks among four students. Many families couldn't afford the ₹500 needed for school supplies, forcing children to drop out.</p>
+
+                            <img src="https://images.pexels.com/photos/8422082/pexels-photo-8422082.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Children studying" class="content-image">
+
+                            <h3>Our Approach</h3>
+                            <p>We implemented a comprehensive program that goes beyond just providing books:</p>
+                            <ul>
+                                <li>Complete school supply kits for each child</li>
+                                <li>Uniforms and shoes to maintain dignity</li>
+                                <li>After-school tutoring in local community centers</li>
+                                <li>Parent counseling on importance of education</li>
+                                <li>Teacher training workshops</li>
+                            </ul>
+
+                            <h3>The Impact</h3>
+                            <p>The results have been remarkable. Attendance rates in supported schools increased from 65% to 98%. Dropout rates fell from 30% to less than 5%. Most importantly, children are excited about learning again.</p>
+
+                            <blockquote>
+                                "My daughter is now the first in our family to complete 10th standard. She dreams of becoming a teacher. This wouldn't have been possible without your support."
+                                <cite>- Sunita Devi, Parent, Village Rampur</cite>
+                            </blockquote>
+
+                            <h3>Looking Ahead</h3>
+                            <p>This year, we're expanding to 50 more villages and aiming to support 20,000 children. But we can't do this alone. Every donation, every volunteer hour, every share on social media brings us closer to a future where no child is left behind.</p>
+
+                            <p><a href="donate.html" class="btn btn-primary">Support Our Education Program</a></p>
+                        </div>
+
+                        <div class="post-footer">
+                            <div class="post-tags">
+                                <strong>Tags:</strong>
+                                <a href="#">Education</a>
+                                <a href="#">Children</a>
+                                <a href="#">Rural Development</a>
+                                <a href="#">Success Stories</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="sidebar-widget">
+                        <h4>Share This Post</h4>
+                        <div class="share-buttons-vertical">
+                            <button class="share-btn facebook" onclick="share('facebook')">
+                                <i class="fab fa-facebook-f"></i> Share on Facebook
+                            </button>
+                            <button class="share-btn twitter" onclick="share('twitter')">
+                                <i class="fab fa-twitter"></i> Tweet This
+                            </button>
+                            <button class="share-btn whatsapp" onclick="share('whatsapp')">
+                                <i class="fab fa-whatsapp"></i> Share on WhatsApp
+                            </button>
+                            <button class="share-btn linkedin" onclick="share('linkedin')">
+                                <i class="fab fa-linkedin-in"></i> Share on LinkedIn
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4>Related Posts</h4>
+                        <div class="recent-posts">
+                            <div class="recent-post-item">
+                                <img src="https://images.pexels.com/photos/7176325/pexels-photo-7176325.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Post">
+                                <div>
+                                    <a href="blog-details.html">Healthcare in Villages</a>
+                                    <span>10th October 2025</span>
+                                </div>
+                            </div>
+                            <div class="recent-post-item">
+                                <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Post">
+                                <div>
+                                    <a href="blog-details.html">Women Empowerment</a>
+                                    <span>5th October 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <div id="modals-placeholder"></div>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        fetch('../partials/header.html').then(res => res.text()).then(html => {
+            document.getElementById('header-placeholder').innerHTML = html;
+            const script = document.createElement('script');
+            script.textContent = document.querySelector('#header-placeholder script').textContent;
+            document.body.appendChild(script);
+        });
+        
+        fetch('../partials/footer.html').then(res => res.text()).then(html => {
+            document.getElementById('footer-placeholder').innerHTML = html;
+            const script = document.createElement('script');
+            script.textContent = document.querySelector('#footer-placeholder script').textContent;
+            document.body.appendChild(script);
+        });
+        
+        fetch('../partials/modals.html').then(res => res.text()).then(html => {
+            document.getElementById('modals-placeholder').innerHTML = html;
+            const script = document.createElement('script');
+            script.textContent = document.querySelector('#modals-placeholder script').textContent;
+            document.body.appendChild(script);
+        });
+
+        function share(platform) {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent(document.querySelector('.post-title').textContent);
+            
+            const urls = {
+                facebook: `https://www.facebook.com/sharer/sharer.php?u=${url}`,
+                twitter: `https://twitter.com/intent/tweet?url=${url}&text=${text}`,
+                whatsapp: `https://wa.me/?text=${text}%20${url}`,
+                linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${url}`
+            };
+            
+            if (urls[platform]) {
+                window.open(urls[platform], '_blank');
+            }
+        }
+    </script>
+
+    <style>
+        .blog-post {
+            background-color: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .post-header {
+            padding: 2rem;
+        }
+
+        .post-category {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .post-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .post-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .author-info {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .author-info img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .author-info strong {
+            display: block;
+            color: var(--dark);
+        }
+
+        .author-info span {
+            font-size: 0.875rem;
+            color: var(--gray);
+        }
+
+        .post-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .post-actions button {
+            width: 36px;
+            height: 36px;
+            border: 1px solid var(--light-gray);
+            background-color: white;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .post-actions button:hover {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+        }
+
+        .post-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .post-content {
+            padding: 2rem;
+        }
+
+        .post-content .lead {
+            font-size: 1.25rem;
+            color: var(--dark-gray);
+            margin-bottom: 2rem;
+        }
+
+        .post-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .post-content h3 {
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .post-content ul {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .post-content li {
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+        }
+
+        .content-image {
+            width: 100%;
+            border-radius: var(--radius-lg);
+            margin: 2rem 0;
+        }
+
+        blockquote {
+            background-color: var(--light-bg);
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+        }
+
+        blockquote cite {
+            display: block;
+            margin-top: 1rem;
+            font-style: normal;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .post-footer {
+            padding: 1.5rem 2rem;
+            background-color: var(--light-bg);
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .post-tags {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .post-tags strong {
+            color: var(--dark-gray);
+        }
+
+        .post-tags a {
+            padding: 0.375rem 0.875rem;
+            background-color: white;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            color: var(--dark-gray);
+            transition: all 0.2s ease;
+        }
+
+        .post-tags a:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .share-buttons-vertical {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .share-btn {
+            padding: 0.75rem 1rem;
+            border: none;
+            border-radius: var(--radius-md);
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .share-btn:hover {
+            transform: translateX(5px);
+        }
+
+        .share-btn.facebook { background-color: #3b5998; }
+        .share-btn.twitter { background-color: #1da1f2; }
+        .share-btn.whatsapp { background-color: #25d366; }
+        .share-btn.linkedin { background-color: #0077b5; }
+
+        .sidebar-widget {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar-widget h4 {
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--light-gray);
+        }
+
+        .recent-posts {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .recent-post-item {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .recent-post-item img {
+            width: 60px;
+            height: 60px;
+            border-radius: var(--radius-md);
+            object-fit: cover;
+        }
+
+        .recent-post-item a {
+            display: block;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .recent-post-item a:hover {
+            color: var(--primary-color);
+        }
+
+        .recent-post-item span {
+            font-size: 0.75rem;
+            color: var(--gray);
+        }
+
+        @media (max-width: 767px) {
+            .post-title {
+                font-size: 2rem;
+            }
+
+            .post-meta {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</body>
+</html>
+
